@@ -1,0 +1,16 @@
+{
+  "name": "trello_clon",
+  "version": "1.0.0",
+  "description": "Esta es una aplicación clon del tablero de Trello para crear tareas y moverlas en cada sección del tablero",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Trello",
+    "javascript",
+    "FIMLM"
+  ],
+  "author": "Gilbert Ardila",
+  "license": "MIT"
+}
