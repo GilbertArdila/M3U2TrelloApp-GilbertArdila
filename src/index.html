@@ -7,9 +7,60 @@
     <link href="./styles/main.css" rel="stylesheet" type="text/css">
     <title>Trello</title>
 </head>
-<body>
 
-    
-    <script src="./index.js"></script>
+<body>
+       <!--main section--> 
+
+  <main class="taskBoard">
+       <!--it would be the header section--> 
+
+    <span class="taskBoard-logo"></span>
+    <button class="button" id="newTask-button">Crear nuevo task</button>
+       <!--it would be the body section--> 
+
+    <section class="taskBoard-toDo task">
+        <h2>Por hacer</h2>
+        <div class="taskBoard-container todo"></div>
+    </section>
+    <section class="taskBoard-doing task">
+        <h2>En progreso</h2>
+        <div class="taskBoard-container doing"></div>
+    </section>
+    <section class="taskBoard-done task">
+        <h2>Finalizadas</h2>
+        <div class="taskBoard-container done"></div>
+    </section>
+
+   <!--it would be the insert task form--> 
+    <form action="#" class="taskBoard-form task hidden">
+       <h2>Nueva Tarea</h2>
+
+       <label for="titulo">Titulo</label>
+       <input type="text" class="titulo">
+
+       <label for="responsable">Responsable</label>
+       <select name="responsable" id="responsable">
+         <option value="usuario1" selected>Usuario 1</option>
+         <option value="usuario2">Usuario 2</option>
+         <option value="usuario3">Usuario 3</option>
+       </select>
+
+    <label for="plazo">Plazo de Entrega</label>
+    <select name="plazo" id="plazo">
+        <option value="1week" selected>1 Semana</option>
+        <option value="2 weeks">2 Semanas</option>
+        <option value="0.5 week">1/2 Semana</option>
+        <option value="more">Más de 2 semanas</option>
+    </select>
+
+       <button class="taskBoard-form__button danger button cancel">Cancelar</button>
+       <button class="taskBoard-form__button primary button create">Crear</button>
+
+    </form>
+  </main>
+   <script src="./utils/nodes.js"></script>
+  
+    <script src="./index.js" type="module"></script>
+     
 </body>
 </html>

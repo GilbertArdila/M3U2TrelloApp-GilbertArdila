@@ -1,0 +1,59 @@
+.taskBoard{
+    width:100% ;
+    min-width: 320px;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 150px,1fr;
+    grid-template-columns: repeat(4,1fr);
+    align-content: space-evenly;
+    background-color: var(--background-color);
+}
+.taskBoard-logo{
+   width: 80px;
+   height: 80px;
+   grid-row: 1/2;
+   grid-column: 1/2;
+   margin-left: 10px;
+   background-image: url('https://cdn2.iconfinder.com/data/icons/social-media-2189/48/11-Trello-128.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+#newTask-button{
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    background-color: var(--red-primary-color);
+    grid-row: 1/2;
+    grid-column: 4/5;
+    align-self: flex-start;
+
+}
+.task{
+    min-height: calc(100vh - 150px);
+    background-color: var(--white-text);
+    margin: 0 auto;
+    
+}
+.taskBoard-toDo{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 90%;
+}
+.taskBoard-doing{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 90%;
+
+}
+.taskBoard-done{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    width: 90%;
+
+}
+
+

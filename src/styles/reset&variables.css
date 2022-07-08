@@ -1,7 +1,7 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 html{
     font-size: 62.5%;
@@ -11,5 +11,10 @@ body{
 }
 
 :root{
-    --mainColor:white;
+    --red-primary-color:#D32F2F;
+    --blue-color:#536DFE;
+    --primary-text:#212121;
+    --secondary-text:#757575;
+    --white-text:#FFFFFF;
+    --background-color:#BDBDBD
 }

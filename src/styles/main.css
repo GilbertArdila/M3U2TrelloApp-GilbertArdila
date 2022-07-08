@@ -1,1 +1,13 @@
 @import './reset&variables.css';
+@import './buttons.css';
+@import './taskBoard.css';
+@import './form.css';
+@import './taskDiv.css';
+
+/*
+add this style  to hidde any section 
+*/
+.hidden{
+    display: none;
+}
+
