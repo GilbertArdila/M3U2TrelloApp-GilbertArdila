@@ -85,13 +85,15 @@
     
     }
     .task{
-        min-height: calc(100vh - 250px);
+        height: auto;
+        min-height: 350px;
       
         
     }
     .taskBoard-toDo{
         grid-row: 2/3;
         grid-column: 1/2;
+        
         
     }
     .taskBoard-doing{
