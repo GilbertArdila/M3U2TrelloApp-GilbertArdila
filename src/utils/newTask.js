@@ -27,13 +27,25 @@ function newTask(){
          const p2 = document.createElement("p");
          p2.innerText = plazoTask;
 
-         div.appendChild(h3);
-         div.appendChild(p);
-         div.appendChild(p2);
-
+         div.append(h3,p,p2);
+        
          todoDiv.appendChild(div);
          taskBoard_form.reset();
          taskBoard_form.classList.add("hidden");
+
+
+         //instanciando hammerjs
+        const hamerJs = new Hammer.Manager(div,{
+         recognizers:[
+            [Hammer.Tap,{enable:true,time:200}]
+         ]
+        });
+        //cambiamos color de borde al elemento para indicar que se ha tomado el mismos
+        hamerJs.on('tap', (event) => {
+          div.style.border='3px solid yellow'
+        }) 
+       
+
      }
     else{
         alert("El valor de titulo no puede estar vacio");
