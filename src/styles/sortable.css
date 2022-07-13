@@ -1,0 +1,7 @@
+.gost{
+    opacity: 0;
+}
+.choosen{
+    background-color: #ffffff;
+    transform: scale(0.8);
+}
