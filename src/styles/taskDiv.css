@@ -1,7 +1,14 @@
 .task-div{
+    position: relative;
     width: 90%;
     height: auto;
     margin: 5px auto;
     padding: 5px;
     border: 1px solid var(--blue-color);
+}
+.task-div__close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
 }
