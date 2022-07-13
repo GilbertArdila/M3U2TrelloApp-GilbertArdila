@@ -1,0 +1,18 @@
+{
+  "taskes": [
+    {
+      "title": "Tarea 1",
+      "User": "User1",
+      "Date": "1/2 week",
+      "board": "done",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Tarea 2",
+      "User": "User2",
+      "Date": "1 week",
+      "board": "to-do"
+    }
+  ]
+}
