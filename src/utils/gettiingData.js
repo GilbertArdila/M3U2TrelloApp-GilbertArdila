@@ -27,6 +27,14 @@ const creatingNewData=async(url,data)=>{
     catch(error){alert(`Ha sucedido un error al tratar de crear la tarea ${error}`)}
 }
 
+const putingData=async(url,id,data)=>{
+    try{
+       const response=await axios.put(`${url}/${id}`,data)
+       return response
+    }
+    catch(error){alert(`Ha sucedido un error al tratar de actualizar el estado de la tarea ${error}`)}
+}
+
 const deletingData=async(url,id)=>{
     try{
        const response=await API.delete(`${url}/${id}`)
@@ -37,5 +45,6 @@ const deletingData=async(url,id)=>{
 export const service={
     gettingData,
     creatingNewData,
+    putingData,
     deletingData
 };

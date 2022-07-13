@@ -1,17 +1,17 @@
 {
   "taskes": [
     {
-      "title": "Tarea 1",
-      "User": "User 1",
-      "Date": "Media semana",
+      "title": "Titulo: Tarea 1",
+      "User": "Responsable: Usuario 1",
+      "Date": "Plazo de entrega: Media semana",
       "board": "done",
       "id": 1
     },
     {
       "id": 2,
-      "title": "Tarea 2",
-      "User": "User 2",
-      "Date": "1 semana",
+      "title": "Titulo: Tarea 2",
+      "User": "Responsable: Usuario 2",
+      "Date": "Plazo de entrega: 1 semana",
       "board": "to-do"
     },
     {
