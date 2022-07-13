@@ -18,17 +18,14 @@
     <button class="button" id="newTask-button">Crear nuevo task</button>
        <!--it would be the body section--> 
 
-    <section class="taskBoard-toDo task">
+    <section class="taskBoard-toDo task" id="left-container">
         <h2>Por hacer</h2>
-        <div class="taskBoard-container todo"></div>
     </section>
-    <section class="taskBoard-doing task">
+    <section class="taskBoard-doing task" id="center-container">
         <h2>En progreso</h2>
-        <div class="taskBoard-container doing"></div>
     </section>
-    <section class="taskBoard-done task">
+    <section class="taskBoard-done task" id="right-container">
         <h2>Finalizadas</h2>
-        <div class="taskBoard-container done"></div>
     </section>
 
    <!--it would be the insert task form--> 
@@ -66,6 +63,7 @@
   <!--Script to sortablejs-->
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <!--Script to index-->
+  <script src="./utils/nodes.js"></script>
   <script src="./index.js" type="module"></script>
   
      
