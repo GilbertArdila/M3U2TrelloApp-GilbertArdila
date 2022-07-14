@@ -5,7 +5,9 @@ const createTaskContainer=({
     tituloTask,
     responsableTask,
     plazoTask,
-    id
+    id,
+    initDate,
+    finishDate
 
 })=>{
 
@@ -26,15 +28,30 @@ const createTaskContainer=({
     p.classList.add("task-div__responable")
     p.innerText = responsableTask;
 
-    const p2 = document.createElement("p");
+   const p2 = document.createElement("p");
    p2.classList.add("task-div__schedule");
-    p2.innerText = plazoTask;
+   p2.innerText = plazoTask;
 
-    div.append(close,h3,p,p2);
+    const p3= document.createElement("p");
+    p3.classList.add("task-div__initDate");
+    p3.innerText = initDate;
+
+   
+    
+
+    div.append(close,h3,p,p2,p3);
+    if(finishDate!==""){
+     const p4= document.createElement("p");
+      p4.classList.add("task-div__finishDate");
+      p4.innerText = finishDate;
+
+      div.appendChild(p4)
+    }
 
      //adding listener to close span and delete task
-     close.onclick=()=>{
-       
+     close.onclick=(e)=>{
+       e.preventDefault();
+
         service.deleteData(BASE_FAKE_API,id);
      }
 
@@ -42,9 +59,14 @@ const createTaskContainer=({
      div.addEventListener("touchend",function(event){
       
        //getting the div info
-       let title=this.querySelector(".task-div__title").innerText;
+       const title=this.querySelector(".task-div__title").innerText;
        const responsable= this.querySelector(".task-div__responable").innerText;
        const schedule= this.querySelector(".task-div__schedule").innerText;
+       let initDate=this.querySelector(".task-div__initDate").innerText;
+
+      
+     
+       
        const id=this.getAttribute("id");
        //creating data object
      
@@ -63,23 +85,21 @@ const createTaskContainer=({
          }
          else if(board.contains('taskBoard-done')){
             board='done'
-            
+             initDate=initDate
+             finishDate=moment().format('DD/MM/Y');
+            finishDate=`Fecha finalización ${finishDate}`;
          }
                const data={
                title,
                User:responsable,
                Date:schedule,
-               board
+               board,
+               initDate,
+               finishDate
             }    
             service.updateData(BASE_FAKE_API,id,data)
 
-            console.log({
-               title,
-               responsable,
-               schedule,
-               board,
-               id
-            })
+            
         
      })
        

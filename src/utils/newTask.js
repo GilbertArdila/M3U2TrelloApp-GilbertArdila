@@ -16,13 +16,23 @@ function newTask(){
     const tituloTask=`Titulo: ${titulo.value}`;
     const responsableTask=`Responsable: ${responsable.value}`;
     const plazoTask=`Plazo de entrega: ${plazo.value}`;
-    const id=Math.floor(Math.random()*100)
+    const id=Math.floor(Math.random()*100);
+    //sending actual date 
+  
+    let initDate= moment().format('DD/MM/Y')
+      
+    initDate=`Fecha de inicio ${initDate}`
+    console.log(initDate)
+    const finishDate="";
+ 
 //creating data object
     const data={
       title:tituloTask,
       User:responsableTask,
       Date:plazoTask,
-      board:'to-do'
+      board:'to-do',
+      initDate,
+      finishDate
    }
     //it title is not empty
      if(titulo.value!="" ){
@@ -31,7 +41,9 @@ function newTask(){
             tituloTask: tituloTask,
             responsableTask: responsableTask,
             plazoTask: plazoTask,
-            id:id
+            id:id,
+            initDate,
+            finishDate
 
         })
         

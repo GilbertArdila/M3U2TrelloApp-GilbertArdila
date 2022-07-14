@@ -7,26 +7,28 @@ import createTaskContainer from './utils/createTaskContainer.js';
 newTask();
 
 
+;
+
 //code to use sortable
 new Sortable(left,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    chosenClass:'choosen'
+    //chosenClass:'choosen'
     
 })
 new Sortable(center,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    chosenClass:'choosen',
+    //chosenClass:'choosen',
     
 })
 new Sortable(right,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    chosenClass:'choosen'
+    //chosenClass:'choosen'
 })
 
 
@@ -44,7 +46,9 @@ window.onload = () => {
                     tituloTask: task.title,
                     responsableTask: task.User,
                     plazoTask: task.Date,
-                    id:task.id
+                    id:task.id,
+                    initDate:task.initDate,
+                    finishDate:task.finishDate
                 })
                 //checking the value board in each task
                 if(task.board==='to-do'){

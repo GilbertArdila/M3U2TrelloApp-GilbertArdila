@@ -1,25 +1,22 @@
 {
   "taskes": [
     {
-      "title": "Titulo: promera tarea",
+      "title": "Titulo: tarea 1",
       "User": "Responsable: usuario 1",
-      "Date": "Plazo de entrega: Media semana",
-      "board": "doing",
+      "Date": "Plazo de entrega: 1 semana",
+      "board": "done",
+      "initDate": "Fecha de inicio 07/07/2022",
+      "finishDate": "Fecha finalización 14/07/2022",
       "id": 1
     },
     {
-      "title": "Titulo: segunda tarea",
+      "title": "Titulo: otra tarea",
       "User": "Responsable: usuario 2",
-      "Date": "Plazo de entrega: 1 semana",
-      "board": "done",
+      "Date": "Plazo de entrega: Más de 2 semanas",
+      "board": "doing",
+      "initDate": "Fecha de inicio 14/07/2022",
+      "finishDate": "",
       "id": 2
-    },
-    {
-      "title": "Titulo: tercera tarea",
-      "User": "Responsable: usuario 3",
-      "Date": "Plazo de entrega: 2 semanas",
-      "board": "to-do",
-      "id": 3
     }
   ]
 }
