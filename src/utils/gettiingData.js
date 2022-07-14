@@ -8,7 +8,7 @@ const API=axios.create({
       }
 })
 
-const gettingData=async(url)=>{
+const getData=async(url)=>{
     try{
         const response=await API.get(url)
          return response;
@@ -18,7 +18,7 @@ const gettingData=async(url)=>{
     
 }
 
-const creatingNewData=async(url,data)=>{
+const createNewData=async(url,data)=>{
     
     try{
        const response=await API.post(url,data)
@@ -27,7 +27,7 @@ const creatingNewData=async(url,data)=>{
     catch(error){alert(`Ha sucedido un error al tratar de crear la tarea ${error}`)}
 }
 
-const putingData=async(url,id,data)=>{
+const updateData=async(url,id,data)=>{
     try{
        const response=await axios.put(`${url}/${id}`,data)
        return response
@@ -35,7 +35,7 @@ const putingData=async(url,id,data)=>{
     catch(error){alert(`Ha sucedido un error al tratar de actualizar el estado de la tarea ${error}`)}
 }
 
-const deletingData=async(url,id)=>{
+const deleteData=async(url,id)=>{
     try{
        const response=await API.delete(`${url}/${id}`)
        return response
@@ -43,8 +43,8 @@ const deletingData=async(url,id)=>{
     catch(error){alert(`Ha sucedido un error al tratar de borrar la tarea ${error}`)}
 }
 export const service={
-    gettingData,
-    creatingNewData,
-    putingData,
-    deletingData
+    getData,
+    createNewData,
+    updateData,
+    deleteData
 };

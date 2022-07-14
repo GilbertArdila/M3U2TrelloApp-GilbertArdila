@@ -3,6 +3,7 @@ import {service} from './utils/gettiingData.js';
 import BASE_FAKE_API from './utils/personal.js';
 import createTaskContainer from './utils/createTaskContainer.js';
 
+//calling newTask
 newTask();
 
 
@@ -29,11 +30,13 @@ new Sortable(right,{
 })
 
 
+
+//showing taskes when page load
 window.onload = () => {
     //calling gettingData and showing each task on DDBB
-    const getData = async () => {
+    const getAllData = async () => {
         try {
-            const data = await service.gettingData(BASE_FAKE_API)
+            const data = await service.getData(BASE_FAKE_API)
             const taskes = data.data;
             taskes.forEach((task) => {
                 //calling createTaskContainer
@@ -42,7 +45,6 @@ window.onload = () => {
                     responsableTask: task.User,
                     plazoTask: task.Date,
                     id:task.id
-
                 })
                 //checking the value board in each task
                 if(task.board==='to-do'){
@@ -56,19 +58,8 @@ window.onload = () => {
                 }
                 
             })
-           
-
-
-
         }
         catch (error) { console.error(error) }
-
-
-
     }
-
-    getData();
-
-
-
+    getAllData();
 }

@@ -1,25 +1,25 @@
 {
   "taskes": [
     {
-      "title": "Titulo: Tarea 1",
-      "User": "Responsable: Usuario 1",
+      "title": "Titulo: promera tarea",
+      "User": "Responsable: usuario 1",
       "Date": "Plazo de entrega: Media semana",
-      "board": "done",
+      "board": "doing",
       "id": 1
     },
     {
-      "id": 2,
-      "title": "Titulo: Tarea 2",
-      "User": "Responsable: Usuario 2",
+      "title": "Titulo: segunda tarea",
+      "User": "Responsable: usuario 2",
       "Date": "Plazo de entrega: 1 semana",
-      "board": "to-do"
+      "board": "done",
+      "id": 2
     },
     {
-      "title": "Titulo: Tarea 3",
+      "title": "Titulo: tercera tarea",
       "User": "Responsable: usuario 3",
-      "Date": "Plazo de entrega: Más de 2 semanas",
+      "Date": "Plazo de entrega: 2 semanas",
       "board": "to-do",
-      "id": 15
+      "id": 3
     }
   ]
 }
