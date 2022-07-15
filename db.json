@@ -4,18 +4,18 @@
       "title": "Titulo: tarea 1",
       "User": "Responsable: usuario 1",
       "Date": "Plazo de entrega: 1 semana",
-      "board": "done",
+      "board": "to-do",
       "initDate": "Fecha de inicio 07/07/2022",
-      "finishDate": "Fecha finalización 14/07/2022",
+      "finishDate": "Fecha finalización 15/07/2022",
       "id": 1
     },
     {
-      "title": "Titulo: otra tarea",
+      "title": "Titulo: tarea 3",
       "User": "Responsable: usuario 2",
-      "Date": "Plazo de entrega: Más de 2 semanas",
-      "board": "doing",
-      "initDate": "Fecha de inicio 14/07/2022",
-      "finishDate": "",
+      "Date": "Plazo de entrega: Media semana",
+      "board": "to-do",
+      "initDate": "Fecha de inicio 5/07/2022",
+      "finishDate": "Fecha finalización 15/07/2022",
       "id": 2
     }
   ]

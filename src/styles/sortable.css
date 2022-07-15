@@ -3,5 +3,6 @@
 }
 .choosen{
     background-color: #ffffff;
-    transform: scale(0.8);
+    border: 1px dotted yellowgreen;
+    
 }

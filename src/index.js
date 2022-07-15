@@ -14,21 +14,21 @@ new Sortable(left,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    //chosenClass:'choosen'
+    chosenClass:'choosen'
     
 })
 new Sortable(center,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    //chosenClass:'choosen',
+    chosenClass:'choosen',
     
 })
 new Sortable(right,{
     group:'shared',
     animation:150,
     ghostClass:'gost',
-    //chosenClass:'choosen'
+    chosenClass:'choosen'
 })
 
 

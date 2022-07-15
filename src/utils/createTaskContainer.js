@@ -15,6 +15,7 @@ const createTaskContainer=({
     const div = document.createElement("div");
     div.classList.add("task-div")
     div.setAttribute("id",`${id}`)
+    div.draggable=true;
 
     const close=document.createElement("span");
     close.classList.add("task-div__close");
@@ -56,9 +57,10 @@ const createTaskContainer=({
      }
 
      //listening the board's change in every div to update the board info
-     div.addEventListener("touchend",function(event){
+     div.addEventListener("dragend",function(event){
       
-       //getting the div info
+      
+      //  //getting the div info
        const title=this.querySelector(".task-div__title").innerText;
        const responsable= this.querySelector(".task-div__responable").innerText;
        const schedule= this.querySelector(".task-div__schedule").innerText;
@@ -68,7 +70,7 @@ const createTaskContainer=({
      
        
        const id=this.getAttribute("id");
-       //creating data object
+       
      
 
       //getting the parent container class and checking it
@@ -89,6 +91,7 @@ const createTaskContainer=({
              finishDate=moment().format('DD/MM/Y');
             finishDate=`Fecha finalización ${finishDate}`;
          }
+         //creating data object
                const data={
                title,
                User:responsable,
@@ -96,8 +99,9 @@ const createTaskContainer=({
                board,
                initDate,
                finishDate
-            }    
-            service.updateData(BASE_FAKE_API,id,data)
+            }  
+             
+       service.updateData(BASE_FAKE_API,id,data)
 
             
         
